@@ -22,16 +22,23 @@
         "phpunit/phpunit": "^9.3.3"
     },
     "autoload": {
+        "files": [
+            "config/init.php",
+            "config/params.php"
+        ],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "classmap": [
+            "app/Sblog/Core"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
     },
     "scripts": {
         "post-autoload-dump": [
